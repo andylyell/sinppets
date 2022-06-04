@@ -379,7 +379,8 @@ html {
   font-size: 1.6rem;
   color: #181819;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   .button__primary p {
     margin-right: 1.2rem;
     pointer-events: none; }
@@ -394,6 +395,20 @@ html {
       width: 2rem;
       height: 2rem;
       color: #181819; }
+  .button__primary--copied {
+    position: absolute;
+    transition: all .2s;
+    padding: 1.2rem;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+    border-radius: 8px;
+    visibility: hidden; }
+    .button__primary--copied.show {
+      transition: all .2s;
+      visibility: visible; }
 
 .button__secondary {
   background: #151516;
@@ -485,6 +500,21 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: flex-end; }
+  .code-snippet__refence-link:visited, .code-snippet__refence-link:active {
+    text-decoration: none; }
+  .code-snippet__reference-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #BCCFFF; }
+    .code-snippet__reference-link p {
+      margin-right: .8rem;
+      font-size: 1.6rem; }
+    .code-snippet__reference-link svg {
+      pointer-events: none;
+      width: 1.6rem;
+      height: 1.6rem;
+      fill: #BCCFFF; }
 
 .tag {
   padding: .4rem .8rem;

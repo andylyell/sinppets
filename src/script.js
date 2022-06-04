@@ -11,14 +11,17 @@
     //EVENT LISTENERS
     ////////////////////////
     document.addEventListener('click', function (e) {
-      // console.log(e.target);
-      //catch when a click event from a copy button is fired
+      console.log(e.target); //catch when a click event from a copy button is fired
+
       if (e.target.classList.contains('copy-button')) {
         var codeToCopy = e.target.closest('.code-snippet__snippet').querySelector('CODE').innerHTML; //select the code snippet
 
         navigator.clipboard.writeText(codeToCopy); //write the code snippet to the clipboard
-        // change the copy button to reflect it has been copied
-        // console.log(code);
+
+        e.target.querySelector('.button__primary--copied').classList.add('show');
+        setTimeout(function () {
+          e.target.querySelector('.button__primary--copied').classList.remove('show');
+        }, 800);
       }
 
       if (e.target.classList.contains('code-snippet__control') || e.target.classList.contains('code-snippet__title')) {

@@ -18,6 +18,8 @@
         display: flex;
         align-items: center;
 
+        position: relative;
+
         p {
             margin-right: 1.2rem;
             pointer-events: none;
@@ -40,6 +42,23 @@
                 width: $btn-sec-dim;
                 height: $btn-sec-dim;
                 color: #181819;
+            }
+        }
+
+        &--copied {
+            position: absolute;
+            transition: all .2s;
+            padding: 1.2rem;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: inherit;
+            border-radius: 8px;
+            visibility: hidden;
+            &.show {
+                transition: all .2s;
+                visibility: visible;
             }
         }
     }

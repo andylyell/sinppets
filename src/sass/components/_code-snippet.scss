@@ -67,4 +67,27 @@
         align-items: flex-end;
     }
 
+    &__refence-link:visited, &__refence-link:active {
+        text-decoration: none;
+    } 
+
+    &__reference-link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: $link-blue;
+
+        & p {
+            margin-right: .8rem;
+            font-size: 1.6rem;
+        }
+
+        & svg {
+            pointer-events: none;
+            $ref-icon-dimensions: 1.6rem;
+            width: $ref-icon-dimensions;
+            height: $ref-icon-dimensions;
+            fill: $link-blue;
+        }
+    }
 }
