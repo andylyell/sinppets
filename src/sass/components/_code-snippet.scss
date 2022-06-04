@@ -32,7 +32,31 @@
     }
 
     &__text-block {
-        
+
+    }
+
+    &__snippet {
+        margin-left: -6.4rem;
+        margin-right: -2.4rem;
+        border-top: 1px solid $grey-5;
+        border-bottom: 1px solid $grey-5;
+        padding: 2.4rem 2.4rem 2.4rem 6.4rem;
+        background-color: #000000;
+    }
+
+    &__code {
+        font-family: $system-font;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 1.6rem;
+        line-height: 150%;
+        color: $grey-1;
+    }
+
+    &__snippet-control {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
     }
 
 }

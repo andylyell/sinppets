@@ -2,22 +2,50 @@
     border-radius: .8rem;
     cursor: pointer;
     transition: all .2s;
+    padding: 1.2rem;
 }
 
 .button {
 
     &__primary {
+
+        @extend %shared-button-styles;
+        background: $grey-1;
+        border: none;
+        font-size: 1.8rem;
+        color: #181819;
+
+        display: flex;
+        align-items: center;
+
+        p {
+            margin-right: 1.2rem;
+        }
+
+        &:hover {
+            background: $white-1;
+        }
+
         
         &--icon {
 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & svg {
+                pointer-events: none;
+                $btn-sec-dim: 2.4rem;
+                width: $btn-sec-dim;
+                height: $btn-sec-dim;
+                color: #181819;
+            }
         }
     }
 
     &__secondary {
 
         @extend %shared-button-styles;
-
-        padding: 1.2rem;
         background: $grey-8;
         border: 1px solid $grey-5;
 

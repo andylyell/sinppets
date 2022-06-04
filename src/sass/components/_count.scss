@@ -1,0 +1,26 @@
+.count {
+    padding: .8rem 1.2rem;
+    background: $grey-7;
+    color: $grey-1;
+
+    display: flex;
+    align-items: flex-end;
+    border-radius: .8rem;
+
+    & svg {
+        margin-right: .4rem;
+        pointer-events: none;
+        $count-icon-dimensions: 1.6rem;
+        width: $count-icon-dimensions;
+        height: $count-icon-dimensions;
+        fill: $grey-3;
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $grey-1;
+    }
+}
