@@ -376,12 +376,13 @@ html {
 .button__primary {
   background: #F0F0F0;
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #181819;
   display: flex;
   align-items: center; }
   .button__primary p {
-    margin-right: 1.2rem; }
+    margin-right: 1.2rem;
+    pointer-events: none; }
   .button__primary:hover {
     background: #FFFFFF; }
   .button__primary--icon {
@@ -390,8 +391,8 @@ html {
     justify-content: center; }
     .button__primary--icon svg {
       pointer-events: none;
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 2rem;
+      height: 2rem;
       color: #181819; }
 
 .button__secondary {
@@ -446,7 +447,8 @@ html {
   padding: 2.4rem 2.4rem 2.4rem 6.4rem;
   background: #151516;
   border: 1px solid #3E3E3E;
-  border-radius: 12px; }
+  border-radius: 12px;
+  transition: all .2s; }
   .code-snippet__control {
     position: absolute;
     top: 2.4rem;
@@ -459,6 +461,12 @@ html {
       width: 3.2rem;
       height: 3.2rem;
       fill: #8D8D8D; }
+  .code-snippet__title {
+    cursor: pointer; }
+  .code-snippet__content {
+    display: none; }
+    .code-snippet__content.show {
+      display: block; }
   .code-snippet__snippet {
     margin-left: -6.4rem;
     margin-right: -2.4rem;
@@ -597,3 +605,30 @@ html {
 
 .utility--mb-xxxlg {
   margin-bottom: 8.8rem; }
+
+.utility--mt-xxsm {
+  margin-top: 0.4rem; }
+
+.utility--mt-xsm {
+  margin-top: 0.8rem; }
+
+.utility--mt-hl-sm {
+  margin-top: 1.2rem; }
+
+.utility--mt-sm {
+  margin-top: 1.6rem; }
+
+.utility--mt-md {
+  margin-top: 2.4rem; }
+
+.utility--mt-lg {
+  margin-top: 3.2rem; }
+
+.utility--mt-xlg {
+  margin-top: 4.8rem; }
+
+.utility--mt-xxlg {
+  margin-top: 6.4rem; }
+
+.utility--mt-xxxlg {
+  margin-top: 8.8rem; }

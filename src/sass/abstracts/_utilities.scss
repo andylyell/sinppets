@@ -1,5 +1,6 @@
 .utility {
 
+    //MARGIN BOTTOM
     &--mb-xxsm {
         margin-bottom: $sp-xxsm;
     }
@@ -34,5 +35,42 @@
 
     &--mb-xxxlg {
         margin-bottom: $sp-xxxlg;
+    }
+
+    //MARGIN TOP
+    &--mt-xxsm {
+        margin-top: $sp-xxsm;
+    }
+
+    &--mt-xsm {
+        margin-top: $sp-xsm;
+    }
+    
+    &--mt-hl-sm {
+        margin-top: $sp-hl-sm;
+    }
+
+    &--mt-sm {
+        margin-top: $sp-sm;
+    }
+
+    &--mt-md {
+        margin-top: $sp-md;
+    }
+
+    &--mt-lg {
+        margin-top: $sp-lg;
+    }
+
+    &--mt-xlg {
+        margin-top: $sp-xlg;
+    }
+
+    &--mt-xxlg {
+        margin-top: $sp-xxlg;
+    }
+
+    &--mt-xxxlg {
+        margin-top: $sp-xxxlg;
     }
 }

@@ -12,7 +12,7 @@
         @extend %shared-button-styles;
         background: $grey-1;
         border: none;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         color: #181819;
 
         display: flex;
@@ -20,6 +20,7 @@
 
         p {
             margin-right: 1.2rem;
+            pointer-events: none;
         }
 
         &:hover {
@@ -35,7 +36,7 @@
 
             & svg {
                 pointer-events: none;
-                $btn-sec-dim: 2.4rem;
+                $btn-sec-dim: 2rem;
                 width: $btn-sec-dim;
                 height: $btn-sec-dim;
                 color: #181819;
