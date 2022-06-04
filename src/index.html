@@ -15,23 +15,147 @@
         <div class="nav__content">
             <div class="nav__main utility--mb-xlg">
                 <h1 class="heading__1">Snippets.</h1>
-                <button>button</button>
+                <button class="button__secondary button__secondary--icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32"
+                        xml:space="preserve">
+                        <path style="fill:none" d="M0 0h32v32H0z" />
+                        <path
+                            d="M14 4h4v4h-4zM4 4h4v4H4zM24 4h4v4h-4zM14 14h4v4h-4zM4 14h4v4H4zM24 14h4v4h-4zM14 24h4v4h-4zM4 24h4v4H4zM24 24h4v4h-4z" />
+                    </svg>
+                </button>
             </div>
             <div class="nav__aside">
-                content
+                <div class="nav__aside--no-content">
+                    <h2 class="heading__2">
+                        Speed up design and development with some handy snippets.
+                    </h2>
+                </div>
+                <!-- <div class="nav__aside--content">
+                    <p class="body__1">
+                        Top snippet
+                    </p>
+                </div> -->
             </div>
         </div>
     </nav>
 
-    <main>
-        <section>
-            <p class="body__1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque repellendus facilis omnis
-                autem deleniti ipsa. Itaque enim cupiditate dignissimos ex voluptatum sit est laboriosam consectetur at,
-                officia eligendi? Minus, ducimus!</p>
+    <main class="main">
+        <!-- CONTROL PANEL -->
+        <section class="main__control utility--mb-xlg">
+            <!-- Search input -->
+            <div class="search-input__container">
+                <input class="search-input" type="text" placeholder="Search...">
+                <svg class="search-input__search-icon" viewBox="0 0 32 32">
+                    <path d="M30 28.59L22.45 21A11 11 0 1021 22.45L28.59 30zM5 14a9 9 0 119 9 9 9 0 01-9-9z" />
+                    <path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z" />
+                </svg>
+            </div>
+            <!-- Button control group -->
+            <div class="main__control-button-group">
+                <button class="button__secondary button__secondary--icon main__control-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path
+                            d="M14 25h14v2H14zM7.17 26l-2.58 2.58L6 30l4-4-4-4-1.42 1.41L7.17 26zM14 15h14v2H14zM7.17 16l-2.58 2.58L6 20l4-4-4-4-1.42 1.41L7.17 16zM14 5h14v2H14zM7.17 6 4.59 8.58 6 10l4-4-4-4-1.42 1.41L7.17 6z" />
+                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none" d="M0 0h32v32H0z" />
+                    </svg>
+                </button>
+                <button class="button__secondary button__secondary--icon main__control-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                        <path
+                            d="m16 28-7-7 1.41-1.41L16 25.17l5.59-5.58L23 21l-7 7zM16 4l7 7-1.41 1.41L16 6.83l-5.59 5.58L9 11l7-7z" />
+                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none" d="M0 0h32v32H0z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+        <!-- CONTENT PANEL -->
+        <section class="main__content">
+            <div class="main__content-group">
+                <h4 class="heading__4 utility--mb-md">Docker snippets</h4>
+
+                <!-- SNIPPET START -->
+                <div class="code-snippet">
+                    <div class="code-snippet__control">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            style="enable-background:new 0 0 32 32" xml:space="preserve">
+                            <path d="m12 8 10 8-10 8z" />
+                            <path style="fill:none" d="M0 0h32v32H0z" />
+                        </svg>
+                    </div>
+                    <h2 class="heading__2 utility--mb-sm">Code Snippet title</h2>
+                    <div class="code-snippet__tag-group">
+                        <div class="tag tag--docker">
+                            Docker
+                        </div>
+                        <div class="tag tag--github">
+                            JavaScript
+                        </div>
+                        <div class="tag tag--javascript">
+                            GitHub
+                        </div>
+                        <div class="tag tag--mac">
+                            MacOS
+                        </div>
+                        <div class="tag tag--sequence">
+                            Sequence
+                        </div>
+                    </div>
+                </div>
+                <!-- SNIPPET END -->
+
+                <!-- SNIPPET START -->
+                <div class="code-snippet">
+                    <div class="code-snippet__control expanded">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            style="enable-background:new 0 0 32 32" xml:space="preserve">
+                            <path d="m12 8 10 8-10 8z" />
+                            <path style="fill:none" d="M0 0h32v32H0z" />
+                        </svg>
+                    </div>
+                    <h2 class="heading__2 utility--mb-sm">Code Snippet title</h2>
+                    <div class="code-snippet__tag-group utility--mb-lg">
+                        <div class="tag tag--docker">
+                            Docker
+                        </div>
+                        <div class="tag tag--github">
+                            JavaScript
+                        </div>
+                        <div class="tag tag--javascript">
+                            GitHub
+                        </div>
+                        <div class="tag tag--mac">
+                            MacOS
+                        </div>
+                        <div class="tag tag--sequence">
+                            Sequence
+                        </div>
+                    </div>
+                    <div class="code-snippet__content">
+                        <div class="code-snippet__text-block utility--mb-md">
+                            <p class="title__1 utility--mb-xxsm">Description</p>
+                            <p class="body__1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                                aspernatur architecto laborum ex ut repellat voluptate quos asperiores illum perferendis
+                                ipsa at, maiores vitae? Voluptatum rerum sapiente laborum quia necessitatibus.</p>
+                        </div>
+                        <h3 class="heading__3">References</h3>
+                    </div>
+                </div>
+                <!-- SNIPPET END -->
+
+            </div>
         </section>
     </main>
-    <footer>
-        footer
+
+    <footer class="footer utility--mb-xxlg">
+        <a class="footer__link" href="https://www.andylyell.com" target="_blank">
+            <div class="footer__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M16 26c5.523 0 10-4.477 10-10S21.523 6 16 6 6 10.477 6 16s4.477 10 10 10Zm0 2c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12Z" />
+                </svg>
+            </div>
+            <p class="body__1 body__1--footer">2022 Andy Lyell</p>
+        </a>
     </footer>
 
     <script src="script.js"></script>

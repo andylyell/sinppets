@@ -1,0 +1,38 @@
+.code-snippet {
+
+    position: relative;
+    padding: 2.4rem 2.4rem 2.4rem 6.4rem;
+    background: $grey-8;
+    border: 1px solid $grey-5;
+    border-radius: 12px;
+
+    &__control {
+
+        &.expanded {
+            transform: rotate(90deg);
+        }
+        
+        position: absolute;
+        top: 2.4rem;
+        left: 1.6rem;
+
+        cursor: pointer;
+
+        & svg {
+            pointer-events: none;
+            $control-icon-dimensions: 3.2rem;
+            width: $control-icon-dimensions;
+            height: $control-icon-dimensions;
+            fill: $grey-3;
+        }
+    }
+
+    &__content {
+
+    }
+
+    &__text-block {
+        
+    }
+
+}

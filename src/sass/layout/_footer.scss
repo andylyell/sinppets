@@ -1,0 +1,29 @@
+.footer {
+
+    width: 90rem;
+    margin: 0 auto;
+
+    &__link {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    &__link, &__link:visited, &__link:active {
+        text-decoration: none;
+    }
+
+    &__icon {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .8rem;
+
+        & svg {
+            $footer-icon-dim: 2.4rem;
+            width: $footer-icon-dim;
+            height: $footer-icon-dim;
+            fill: $grey-1;
+        }
+    }
+}

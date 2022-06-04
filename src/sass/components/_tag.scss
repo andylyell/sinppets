@@ -1,0 +1,35 @@
+.tag {
+    padding: .4rem .8rem;
+    border-radius: 4px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+
+    &--docker {
+        background: $docker-blue;
+        color: #030825;
+    };
+
+    &--javascript {
+        background: $javascript-yellow;
+        color: #000000;
+    }
+
+    &--github {
+        background: $github-green;
+        color: #1D1D1F;
+    }
+
+    &--mac {
+        background: $mac-silver;
+        color: #1D1D1F;
+    }
+
+    &--sequence {
+        background: $sequence;
+        color: #1D1D1F;
+    }
+
+}

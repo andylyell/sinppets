@@ -1,0 +1,28 @@
+.main {
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 6.4rem 0;
+
+    &__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__control-button-group {
+        display: flex;
+        align-items: center;
+    }
+
+    &__control-button {
+        &:not(:last-child) {
+            margin-right: .8rem;
+        
+        }
+    }
+
+    &__content-group > [class="code-snippet"] {
+        margin-bottom: 1.6rem;
+    }
+}
+

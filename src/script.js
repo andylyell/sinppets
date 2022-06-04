@@ -1,7 +1,17 @@
 (function () {
-	'use strict';
+    'use strict';
 
-	console.log('2021 portfolio');
+    ////////////////////////
+    //VARIABLES
+    ////////////////////////
+    ////////////////////////
+    //FUNCTIONS
+    ////////////////////////
+    ////////////////////////
+    //EVENT LISTENERS
+    ////////////////////////
+    document.addEventListener('click', function (e) {// console.log(e.target);
+    });
 
 })();
 //# sourceMappingURL=script.js.map

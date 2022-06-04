@@ -4,12 +4,17 @@
 
 //===== Abstracts ====//
 @import './abstracts/variables';
-@import './abstracts/utilities'; 
 //===== Base ====//
 @import './base/foundation';
-
 @import './base/typography'; 
 //===== Components ====//
+@import './components/button';
+@import './components/input';
+@import './components/code-snippet'; 
+@import './components/tag'; 
 //===== Layout ====//
 @import './layout/navigation';
-@import './layout/home'; 
+@import './layout/home';
+@import './layout/footer';
+
+@import './abstracts/utilities'; 
