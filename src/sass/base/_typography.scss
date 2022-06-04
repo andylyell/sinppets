@@ -1,0 +1,27 @@
+html {
+    font-family: $system-font;
+}
+
+.heading {
+    &__1 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 57px;
+        letter-spacing: -0.04em;
+        color: $grey-1;
+    }
+    &__2 {
+        
+    }
+}
+
+.body {
+    &__1 {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 1.9rem;
+        color: $grey-1;
+    }
+}

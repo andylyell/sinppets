@@ -1,7 +1,15 @@
-//===== Abstracts ====//
-//===== Base ====//
 @import './base/reset';
+//===== Vendors ====//
+@import './vendors/normalize';
+
+//===== Abstracts ====//
+@import './abstracts/variables';
+@import './abstracts/utilities'; 
+//===== Base ====//
+@import './base/foundation';
+
+@import './base/typography'; 
 //===== Components ====//
 //===== Layout ====//
-//===== Vendors ====//
-@import './vendors/normalize'; 
+@import './layout/navigation';
+@import './layout/home'; 
