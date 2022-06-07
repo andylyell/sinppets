@@ -374,7 +374,7 @@ html {
   padding: 1px 2px; }
 
 .button__primary, .button__secondary {
-  border-radius: .8rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all .2s;
   padding: 1.2rem; }
@@ -422,6 +422,10 @@ html {
   .button__secondary:hover {
     background: #1D1D1F;
     border: 1px solid #6A6A6A; }
+  .button__secondary.active {
+    background: #1D1D1F;
+    border: 1px solid #6A6A6A;
+    border-radius: 8px 8px 0px 0px; }
   .button__secondary--icon {
     width: 4.8rem;
     height: 4.8rem;
@@ -433,6 +437,23 @@ html {
       width: 2.4rem;
       height: 2.4rem;
       fill: #8D8D8D; }
+
+.button__menu {
+  display: none;
+  position: absolute;
+  padding: 2.4rem;
+  border-radius: 8px 0 8px 8px;
+  right: 0;
+  top: 4.7rem;
+  background: #1D1D1F;
+  border: 1px solid #6A6A6A;
+  width: 26rem; }
+  .button__menu button, .button__menu a {
+    float: right; }
+    .button__menu button:not(:last-child), .button__menu a:not(:last-child) {
+      margin-bottom: .8rem; }
+  .button__menu.show {
+    display: block; }
 
 .search-input {
   height: 4.8rem;
@@ -580,6 +601,8 @@ html {
     align-items: center; }
   .nav__aside--no-content {
     width: 40rem; }
+  .nav__information-menu {
+    position: relative; }
 
 .main {
   max-width: 90rem;

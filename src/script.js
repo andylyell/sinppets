@@ -64,7 +64,9 @@
   //VARIABLES
   ////////////////////////
   var allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
-  ////////////////////////
+
+  var navInformationButton = document.getElementById('nav-information-button');
+  var navInformationMenu = document.getElementById('nav-information-menu'); ////////////////////////
   //FUNCTIONS
   ////////////////////////
   //** VIEW FUNCTIONS */
@@ -165,8 +167,7 @@
 
     allCodeSnippets.forEach(function (snippet) {
       var snippetId = snippet.querySelector('.code-snippet__code').querySelector('CODE').dataset.id; //get the unique snippet id
-
-      console.log(snippetId);
+      // console.log(snippetId);
 
       for (var _i = 0, _Object$entries = Object.entries(codeSnippetsLocalStorage); _i < _Object$entries.length; _i++) {
         var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
@@ -184,7 +185,7 @@
   }
 
   function writeToLocalStorage(copySnippet) {
-    console.log(copySnippet);
+    // console.log(copySnippet);
     var snippetId = copySnippet.closest('.code-snippet__snippet').querySelector('CODE').dataset.id; //get the unique snippet id
 
     var codeSnippetsLocalStorage = localStorage.getItem('snippets'); // get the localStorage
@@ -213,9 +214,22 @@
 
     localStorage.setItem('snippets', JSON.stringify(codeSnippetsLocalStorage)); //set the updated localstorage object back to localstorage
   }
+
+  function resetLocalStorage() {
+    var codeSnippetsLocalStorage = localStorage.getItem('snippets'); // get the localStorage
+
+    if (codeSnippetsLocalStorage) {
+      localStorage.setItem('snippets', JSON.stringify({})); //set the updated localstorage object back to localstorage
+
+      return;
+    }
+
+    return;
+  } ////////////////////////
   //EVENT LISTENERS
   ////////////////////////
   //call script upon page load
+
 
   window.addEventListener('load', function (e) {// console.log(localStorage);
   });
@@ -238,13 +252,13 @@
 
     if (e.target.classList.contains('code-snippet__control') || e.target.classList.contains('code-snippet__title')) {
       collapseCodeSnippet(e.target);
-    } //--//
+    }
     //** catch when a click event when the navigation information button is fired **//
     //--//
 
-
     if (e.target.id === 'nav-information-button') {
-      console.log('Show navigation information');
+      navInformationButton.classList.toggle('active');
+      navInformationMenu.classList.toggle('show');
     } //--//
     //** catch when a click event when the collapse all button is fired **//
     //--//
@@ -259,6 +273,21 @@
 
     if (e.target.id === 'sort-list-button') {
       console.log('Sort list button');
+    }
+    //** catch when a click event when the reset button is fired **//
+    //--//
+
+    if (e.target.id === 'reset-count-button') {
+      resetLocalStorage();
+      allCodeSnippets.forEach(function (snippet) {
+        setUICounter(0, snippet);
+      });
+    }
+  }); //catch all keydown devents
+
+  document.addEventListener('keydown', function (e) {
+    if (e.target.classList.contains('code-snippet__title') && e.key === 'Enter') {
+      collapseCodeSnippet(e.target);
     }
   });
 

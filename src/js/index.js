@@ -2,6 +2,8 @@
 //VARIABLES
 ////////////////////////
 const allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
+const navInformationButton = document.getElementById('nav-information-button');
+const navInformationMenu = document.getElementById('nav-information-menu');
 
 ////////////////////////
 //FUNCTIONS
@@ -86,7 +88,7 @@ function setSnippets() {
     codeSnippetsLocalStorage = JSON.parse(codeSnippetsLocalStorage); // if it does exists then parse the contents
     allCodeSnippets.forEach((snippet) => {
         const snippetId = snippet.querySelector('.code-snippet__code').querySelector('CODE').dataset.id; //get the unique snippet id
-        console.log(snippetId);
+        // console.log(snippetId);
         for (const [key, value] of Object.entries(codeSnippetsLocalStorage)) {
             if(snippetId === key) {
                 setUICounter(value, snippet);
@@ -99,7 +101,7 @@ function setSnippets() {
 
 //Function to write to localStorage when there is a button click
 function writeToLocalStorage(copySnippet) {
-    console.log(copySnippet);
+    // console.log(copySnippet);
     const snippetId = copySnippet.closest('.code-snippet__snippet').querySelector('CODE').dataset.id; //get the unique snippet id
     let codeSnippetsLocalStorage = localStorage.getItem('snippets'); // get the localStorage
     if(codeSnippetsLocalStorage){ //check if local storage exists
@@ -118,6 +120,16 @@ function writeToLocalStorage(copySnippet) {
     }
     localStorage.setItem('snippets', JSON.stringify(codeSnippetsLocalStorage)); //set the updated localstorage object back to localstorage
 };
+
+//Function to rest local storage
+function resetLocalStorage() {
+    let codeSnippetsLocalStorage = localStorage.getItem('snippets'); // get the localStorage
+    if(codeSnippetsLocalStorage) {
+        localStorage.setItem('snippets', JSON.stringify({})); //set the updated localstorage object back to localstorage
+        return;
+    }
+    return;
+}
 
 
 
@@ -152,13 +164,14 @@ document.addEventListener('click', (e) => {
     //--//
     if(e.target.classList.contains('code-snippet__control') || e.target.classList.contains('code-snippet__title')) {
         collapseCodeSnippet(e.target);
-    }
+    };
 
     //--//
     //** catch when a click event when the navigation information button is fired **//
     //--//
     if(e.target.id === 'nav-information-button') {
-        console.log('Show navigation information');
+        navInformationButton.classList.toggle('active');
+        navInformationMenu.classList.toggle('show');
     }
 
     //--//
@@ -173,6 +186,23 @@ document.addEventListener('click', (e) => {
     //--//
     if(e.target.id === 'sort-list-button') {
         console.log('Sort list button');
-    }
+    };
+
+    //--//
+    //** catch when a click event when the reset button is fired **//
+    //--//
+    if(e.target.id === 'reset-count-button') {
+        resetLocalStorage();
+        allCodeSnippets.forEach((snippet) => {
+            setUICounter(0, snippet);
+        });
+    };
 
 });
+
+//catch all keydown devents
+document.addEventListener('keydown', (e) => {
+    if(e.target.classList.contains('code-snippet__title') && e.key === 'Enter') {
+        collapseCodeSnippet(e.target);
+    };
+})
