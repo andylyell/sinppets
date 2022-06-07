@@ -52,10 +52,19 @@ html {
         font-style: normal;
         font-weight: 400;
         font-size: 1.6rem;
-        line-height: 1.9rem;
+        line-height: 2.2rem;
         color: $grey-1;
         &--footer {
             color: $grey-3;
         }
+    }
+}
+
+.code {
+    &__1 {
+        background: rgba(255,255,255,0.2);
+        border-radius: 2px;
+        margin: 0 .3rem;
+        padding: 1px 2px;
     }
 }

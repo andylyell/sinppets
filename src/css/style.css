@@ -362,10 +362,16 @@ html {
   font-style: normal;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.9rem;
+  line-height: 2.2rem;
   color: #F0F0F0; }
   .body__1--footer {
     color: #8D8D8D; }
+
+.code__1 {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  margin: 0 .3rem;
+  padding: 1px 2px; }
 
 .button__primary, .button__secondary {
   border-radius: .8rem;
