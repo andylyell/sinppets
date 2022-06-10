@@ -11,18 +11,16 @@
 
     &__control-button-group {
         display: flex;
-        align-items: center;
-    }
-
-    &__control-button {
-        &:not(:last-child) {
-            margin-right: .8rem;
-        
-        }
+        align-items: center;    
     }
 
     &__content-group > [class="code-snippet"] {
         margin-bottom: 1.6rem;
+    }
+
+    &__control-button-group--sort-menu {
+        position: relative;
+        margin-left: .8rem;
     }
 }
 

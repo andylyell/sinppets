@@ -110,6 +110,7 @@
         background: $grey-7;
         border: 1px solid $grey-4;
         width: 26rem;
+        z-index: 100;
         & button, & a {
             float: right;
             &:not(:last-child){
@@ -118,6 +119,10 @@
         }
         &.show{
             display: block;
+        }
+        &--sort-list {
+            padding: 1.6rem 0rem;
+            width: 32rem;
         }
     }
 }

@@ -90,4 +90,8 @@
             fill: $link-blue;
         }
     }
+
+    & pre {
+        overflow: auto;
+    }
 }

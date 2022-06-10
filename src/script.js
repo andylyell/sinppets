@@ -66,7 +66,11 @@
   var allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
 
   var navInformationButton = document.getElementById('nav-information-button');
-  var navInformationMenu = document.getElementById('nav-information-menu'); ////////////////////////
+  var navInformationMenu = document.getElementById('nav-information-menu');
+  var sortSnippetButton = document.getElementById('sort-snippet-button');
+  var sortSnippetMenu = document.getElementById('sort-snippet-menu');
+  var sortListItems = document.querySelectorAll('.list-select');
+  var snippetContent = document.getElementById('snippet-content'); ////////////////////////
   //FUNCTIONS
   ////////////////////////
   //** VIEW FUNCTIONS */
@@ -151,9 +155,15 @@
     snippetCounter.innerHTML = 0; //set inner html of element to zero
 
     return;
-  } //** MODEL FUNCTIONS */
-  //Function to read from localStorage and set counters for snippets in the UI
+  }
 
+  function applySortSelection(element) {
+    sortListItems.forEach(function (sortItem) {
+      sortItem.classList.remove('active');
+    });
+    element.classList.add('active');
+  }
+  //Function to read from localStorage and set counters for snippets in the UI
 
   function setSnippets() {
     var codeSnippetsLocalStorage = localStorage.getItem('snippets'); // get the localStorage
@@ -225,17 +235,83 @@
     }
 
     return;
-  } ////////////////////////
+  }
+
+  function sortCodeSnippet(element) {
+    var snippetArr = Array.from(allCodeSnippets); // create an array from nodelist
+
+    var elements = document.createDocumentFragment(); //create document fragment
+    //**//sort snippets to be alphabetically ordered
+
+    if (element === 'technology-type') {
+      snippetArr.sort(function (a, b) {
+        if (a.querySelector('.tag').innerHTML > b.querySelector('.tag').innerHTML) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    } //**//sort snippets to be alphabetically ordered
+
+
+    if (element === 'alpha-ascending') {
+      snippetArr.sort(function (a, b) {
+        if (a.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '') > b.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '')) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    } //**//sort snippets to be reverse alphabetically ordered
+
+
+    if (element === 'alpha-descending') {
+      snippetArr.sort(function (a, b) {
+        if (a.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '') < b.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '')) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    } //**//sort snippets to be number ordered
+
+
+    if (element === 'most-used') {
+      snippetArr.sort(function (a, b) {
+        if (parseInt(a.querySelector('.code-snippet__snippet-counter').innerHTML) < parseInt(b.querySelector('.code-snippet__snippet-counter').innerHTML)) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+
+    if (element === 'least-used') {
+      snippetArr.sort(function (a, b) {
+        if (parseInt(a.querySelector('.code-snippet__snippet-counter').innerHTML) > parseInt(b.querySelector('.code-snippet__snippet-counter').innerHTML)) {
+          return 1;
+        } else {
+          return -1;
+        }
+      });
+    }
+    snippetArr.forEach(function (snippet) {
+      elements.appendChild(snippet);
+    });
+    snippetContent.innerHTML = ""; //clear the list
+
+    snippetContent.appendChild(elements);
+  }
   //EVENT LISTENERS
   ////////////////////////
   //call script upon page load
-
 
   window.addEventListener('load', function (e) {// console.log(localStorage);
   });
   window.addEventListener('DOMContentLoaded', function (e) {
     // console.log('DOM fully loaded and parsed');
     setSnippets();
+    sortCodeSnippet('technology-type'); //when the dom is loaded, order content by technology tag
   }); //catch all clicks
 
   document.addEventListener('click', function (e) {
@@ -271,11 +347,20 @@
     //--//
 
 
-    if (e.target.id === 'sort-list-button') {
-      console.log('Sort list button');
+    if (e.target.id === 'sort-snippet-button') {
+      sortSnippetButton.classList.toggle('active');
+      sortSnippetMenu.classList.toggle('show');
     }
+    //** catch when a click event when a sort list-select item is fired **//
+    //--//
+
+    if (e.target.classList.contains('list-select')) {
+      applySortSelection(e.target);
+      sortCodeSnippet(e.target.dataset.sort);
+    } //--//
     //** catch when a click event when the reset button is fired **//
     //--//
+
 
     if (e.target.id === 'reset-count-button') {
       resetLocalStorage();
@@ -288,6 +373,12 @@
   document.addEventListener('keydown', function (e) {
     if (e.target.classList.contains('code-snippet__title') && e.key === 'Enter') {
       collapseCodeSnippet(e.target);
+    }
+
+    if (e.target.classList.contains('list-select') && e.key === 'Enter') {
+      applySortSelection(e.target); // sortCodeSnippet(e.target);
+
+      sortCodeSnippet(e.target.dataset.sort);
     }
   });
 

@@ -4,6 +4,10 @@
 const allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
 const navInformationButton = document.getElementById('nav-information-button');
 const navInformationMenu = document.getElementById('nav-information-menu');
+const sortSnippetButton = document.getElementById('sort-snippet-button');
+const sortSnippetMenu = document.getElementById('sort-snippet-menu');
+const sortListItems = document.querySelectorAll('.list-select');
+const snippetContent = document.getElementById('snippet-content');
 
 ////////////////////////
 //FUNCTIONS
@@ -73,9 +77,16 @@ function setUICounter(number, snippet) {
         return;
     }
     snippetCounter.innerHTML = 0; //set inner html of element to zero
-    return
-    
-}
+    return;   
+};
+
+//Function to change sort list that is applied
+function applySortSelection(element) {
+    sortListItems.forEach((sortItem) => {
+        sortItem.classList.remove('active');
+    });
+    element.classList.add('active');  
+};
 
 //** MODEL FUNCTIONS */
 
@@ -129,9 +140,76 @@ function resetLocalStorage() {
         return;
     }
     return;
-}
+};
 
+//Sort code snippets by type
+function sortCodeSnippet(element) {
 
+    let snippetArr = Array.from(allCodeSnippets); // create an array from nodelist
+    let elements = document.createDocumentFragment(); //create document fragment
+
+    //**//sort snippets to be alphabetically ordered
+    if(element === 'technology-type') {
+        snippetArr.sort((a,b) => {
+            if(a.querySelector('.tag').innerHTML > b.querySelector('.tag').innerHTML) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    }
+
+    //**//sort snippets to be alphabetically ordered
+    if(element === 'alpha-ascending') {
+        snippetArr.sort((a,b) => {
+            if(a.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '') > b.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '')) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    }
+
+    //**//sort snippets to be reverse alphabetically ordered
+    if(element === 'alpha-descending') {
+        snippetArr.sort((a,b) => {
+            if(a.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '') < b.querySelector('.code-snippet__title').innerHTML.replace(/\s+/g, '')) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    }
+
+    //**//sort snippets to be number ordered
+    if(element === 'most-used') {
+        snippetArr.sort((a,b) => {
+            if(parseInt(a.querySelector('.code-snippet__snippet-counter').innerHTML) < parseInt(b.querySelector('.code-snippet__snippet-counter').innerHTML)) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    };
+
+    //**//sort snippets to be reverse number ordered
+    if(element === 'least-used') {
+        snippetArr.sort((a,b) => {
+            if(parseInt(a.querySelector('.code-snippet__snippet-counter').innerHTML) > parseInt(b.querySelector('.code-snippet__snippet-counter').innerHTML)) {
+                return 1;
+            } else {
+                return -1;
+            }
+        });
+    };
+
+    snippetArr.forEach((snippet) => {
+        elements.appendChild(snippet);
+    });
+
+    snippetContent.innerHTML = ``; //clear the list
+    snippetContent.appendChild(elements);
+};
 
 ////////////////////////
 //EVENT LISTENERS
@@ -145,6 +223,7 @@ window.addEventListener('load', (e) => {
 window.addEventListener('DOMContentLoaded', (e) => {
     // console.log('DOM fully loaded and parsed');
     setSnippets();
+    sortCodeSnippet('technology-type'); //when the dom is loaded, order content by technology tag
 });
 
 //catch all clicks
@@ -184,9 +263,18 @@ document.addEventListener('click', (e) => {
     //--//
     //** catch when a click event when the sort list button is fired **//
     //--//
-    if(e.target.id === 'sort-list-button') {
-        console.log('Sort list button');
+    if(e.target.id === 'sort-snippet-button') {
+        sortSnippetButton.classList.toggle('active');
+        sortSnippetMenu.classList.toggle('show');
     };
+
+    //--//
+    //** catch when a click event when a sort list-select item is fired **//
+    //--//
+    if(e.target.classList.contains('list-select')) {
+        applySortSelection(e.target);
+        sortCodeSnippet(e.target.dataset.sort);
+    }
 
     //--//
     //** catch when a click event when the reset button is fired **//
@@ -202,7 +290,16 @@ document.addEventListener('click', (e) => {
 
 //catch all keydown devents
 document.addEventListener('keydown', (e) => {
+
     if(e.target.classList.contains('code-snippet__title') && e.key === 'Enter') {
         collapseCodeSnippet(e.target);
     };
+
+    if(e.target.classList.contains('list-select') && e.key === 'Enter') {
+        applySortSelection(e.target);
+        // sortCodeSnippet(e.target);
+        sortCodeSnippet(e.target.dataset.sort);
+    };
+
+    
 })

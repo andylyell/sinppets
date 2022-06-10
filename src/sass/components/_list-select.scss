@@ -1,0 +1,46 @@
+.list-select {
+
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.2rem 2.4rem;
+    transition: all .2s;
+
+    &:hover {
+        background: $grey-6;
+    }
+
+    :focus {
+        background: pink;
+    }
+
+    &.active &__icon {
+        visibility: visible;
+    }
+
+    &__icon {
+        pointer-events: none;
+        visibility: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.6rem;
+
+        & svg {
+            $list-icon-dimensions: 2.4rem;
+            width: $list-icon-dimensions;
+            height: $list-icon-dimensions;
+            fill: $grey-3;
+        }
+    }
+
+    &__text {
+        pointer-events: none;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.8rem;
+        line-height: 21px;
+        letter-spacing: 0.01em;
+        color: $grey-1;
+    }
+}
