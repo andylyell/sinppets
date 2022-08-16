@@ -373,6 +373,13 @@ html {
   margin: 0 .3rem;
   padding: 1px 2px; }
 
+.list__1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+  color: #8D8D8D; }
+
 .button__primary, .button__secondary {
   border-radius: 8px;
   cursor: pointer;
@@ -609,7 +616,7 @@ html {
     background: #53A158;
     color: #1D1D1F; }
   .tag--mac {
-    background: #B5B0A6;
+    background: #b2a68f;
     color: #1D1D1F; }
   .tag--sequence {
     background: #EDEBE8;
