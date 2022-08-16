@@ -61,6 +61,9 @@
   }
 
   ////////////////////////
+  //LIBRARIES
+  ////////////////////////
+  ////////////////////////
   //VARIABLES
   ////////////////////////
   var allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
@@ -70,7 +73,8 @@
   var sortSnippetButton = document.getElementById('sort-snippet-button');
   var sortSnippetMenu = document.getElementById('sort-snippet-menu');
   var sortListItems = document.querySelectorAll('.list-select');
-  var snippetContent = document.getElementById('snippet-content'); ////////////////////////
+  var snippetContent = document.getElementById('snippet-content');
+  console.log(he); ////////////////////////
   //FUNCTIONS
   ////////////////////////
   //** VIEW FUNCTIONS */
@@ -79,7 +83,7 @@
   function toggleCopiedClass(copyButton) {
     var codeToCopy = copyButton.closest('.code-snippet__snippet').querySelector('CODE').innerHTML; //select the code snippet
 
-    navigator.clipboard.writeText(codeToCopy); //write the code snippet to the clipboard
+    navigator.clipboard.writeText(he.decode(codeToCopy)); //write the code snippet to the clipboard
 
     copyButton.querySelector('.button__primary--copied').classList.add('show'); //add the show class to the button
 

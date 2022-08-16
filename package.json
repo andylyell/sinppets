@@ -18,8 +18,9 @@
     "build:images": "imagemin ./src/images/* --out-dir=public/images",
     "clean": "trash ./public",
     "create:public": "mkdir public && cd $_ && mkdir images css",
-    "build": "npm-run-all -s clean create:public build:html build:css clean:css build:js build:images",
-    "build:test": "live-server --port=5555 --open=./public"
+    "build": "npm-run-all -s clean create:public build:html build:css clean:css build:js build:images copy:he",
+    "build:test": "live-server --port=5555 --open=./public",
+    "copy:he": "cp ./src/js/he.js ./public"
   },
   "author": "Andy Lyell",
   "license": "ISC",

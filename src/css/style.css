@@ -579,7 +579,17 @@ html {
       height: 1.6rem;
       fill: #BCCFFF; }
   .code-snippet pre {
-    overflow: auto; }
+    padding-bottom: 1.6rem;
+    overflow: auto;
+    color: #d6d6d6; }
+    .code-snippet pre::-webkit-scrollbar {
+      height: .5rem; }
+    .code-snippet pre::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 5px; }
+    .code-snippet pre::-webkit-scrollbar-thumb {
+      background-color: #3E3E3E;
+      border-radius: 5px; }
 
 .tag {
   padding: .4rem .8rem;

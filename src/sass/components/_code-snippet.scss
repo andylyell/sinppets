@@ -12,7 +12,7 @@
         &.expanded {
             transform: rotate(90deg);
         }
-        
+
         position: absolute;
         top: 2.4rem;
         left: 1.6rem;
@@ -34,14 +34,13 @@
 
     &__content {
         display: none;
+
         &.show {
             display: block;
         }
     }
 
-    &__text-block {
-
-    }
+    &__text-block {}
 
     &__snippet {
         margin-left: -6.4rem;
@@ -67,9 +66,10 @@
         align-items: flex-end;
     }
 
-    &__refence-link:visited, &__refence-link:active {
+    &__refence-link:visited,
+    &__refence-link:active {
         text-decoration: none;
-    } 
+    }
 
     &__reference-link {
         text-decoration: none;
@@ -92,6 +92,22 @@
     }
 
     & pre {
+
+        padding-bottom: 1.6rem;
         overflow: auto;
+        color: #d6d6d6;
+        &::-webkit-scrollbar {
+            height: .5rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgba(255,255,255,0.1);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $grey-5;
+            border-radius: 5px;
+        }
     }
 }
