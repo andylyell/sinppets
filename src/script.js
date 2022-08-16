@@ -74,8 +74,7 @@
   var sortSnippetButton = document.getElementById('sort-snippet-button');
   var sortSnippetMenu = document.getElementById('sort-snippet-menu');
   var sortListItems = document.querySelectorAll('.list-select');
-  var snippetContent = document.getElementById('snippet-content');
-  console.log(he); ////////////////////////
+  var snippetContent = document.getElementById('snippet-content'); ////////////////////////
   //FUNCTIONS
   ////////////////////////
   //** VIEW FUNCTIONS */

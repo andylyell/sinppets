@@ -47,7 +47,7 @@
         margin-right: -2.4rem;
         border-top: 1px solid $grey-5;
         border-bottom: 1px solid $grey-5;
-        padding: 2.4rem 2.4rem 2.4rem 6.4rem;
+        padding: 3.2rem 2.4rem 3.2rem 6.4rem;
         background-color: #000000;
     }
 
@@ -62,8 +62,12 @@
 
     &__snippet-control {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
         align-items: flex-end;
+
+        & .button__primary {
+            margin-right: .8rem;
+        }
     }
 
     &__refence-link:visited,

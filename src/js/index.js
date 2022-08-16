@@ -14,8 +14,6 @@ const sortSnippetMenu = document.getElementById('sort-snippet-menu');
 const sortListItems = document.querySelectorAll('.list-select');
 const snippetContent = document.getElementById('snippet-content');
 
-console.log(he);
-
 ////////////////////////
 //FUNCTIONS
 ////////////////////////

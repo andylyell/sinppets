@@ -2,7 +2,7 @@
     border-radius: 8px;
     cursor: pointer;
     transition: all .2s;
-    padding: 1.2rem;
+    padding: .8rem 1.2rem;
 }
 
 .button {
@@ -10,7 +10,7 @@
     &__primary {
 
         @extend %shared-button-styles;
-        background: $grey-1;
+        background: $grey-2;
         border: none;
         font-size: 1.6rem;
         color: #181819;
@@ -48,7 +48,7 @@
         &--copied {
             position: absolute;
             transition: all .2s;
-            padding: 1.2rem;
+            padding: .8rem 1.2rem;
             top: 0;
             left: 0;
             width: 100%;

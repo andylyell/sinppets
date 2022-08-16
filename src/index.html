@@ -186,24 +186,15 @@
                         </div>
                     </div>
                     <div class="code-snippet__content utility--mt-md">
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
                             <p class="body__1">Use this format to rename any branch name to another.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="change-master-branch-name">git branch -m master main</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -221,6 +212,15 @@
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
                         <h3 class="heading__3 utility--mb-xsm">References</h3>
@@ -260,24 +260,15 @@
                         </div>
                     </div>
                     <div class="code-snippet__content utility--mt-md">
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
                             <p class="body__1">Use this snippet to clone the z/OS Connect CICS sample API project and start up the z/OS Connect Designer tooling with the finished project mounted.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="use-zc-only-docker">git clone https://github.com/zosconnect/sample-cics-api && cd sample-cics-api/finish && docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=1110 -e CICS_USER='alyell' -e CICS_PASSWORD='={aes}bd7gi_383bdbILF;BN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -295,25 +286,25 @@
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="body__1">This snippet will simply start the docker container in your current directory with environmental variables. Make sure you update the variables to your own.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="no-git-clone-use-zc-only-docker">docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=1110 -e CICS_USER='alyell' -e CICS_PASSWORD='={aes}bd7gi_383bdbILF;BN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -331,6 +322,15 @@
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
                     </div> 
@@ -360,13 +360,20 @@
                         <div class="tag tag--browser">
                             Browser
                         </div>
+                        <div class="tag tag--sequence">
+                            Sequence
+                        </div>
                     </div>
                     <div class="code-snippet__content utility--mt-md">
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
-                            <p class="body__1">Use this format to rename any branch name to another.</p>
+                            <p class="body__1">This sequence will allow you to download carbon icons fromt he carbon design website.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
+                            <h3 class="heading__3 utility--mb-xxsm">Steps</h3>
+                            <p class="body__1"><span class="list__1">1.</span> Create a function that you can place into the browser console.</p>
+                        </div>
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="download-carbon-icon">function pause(msec) {
     return new Promise(
@@ -395,15 +402,6 @@ function download(icon) {
 }</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -421,26 +419,26 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="code-snippet__text-block utility--mb-sm">
-                            <p class="title__1 utility--mb-xxsm">Description</p>
-                            <p class="body__1">Use this format to rename any branch name to another.</p>
+                        <div class="code-snippet__text-block utility--mb-md">
+                            <p class="body__1"><span class="list__1">2.</span> Run function within the browser to download a section of icons.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="download-carbon-icon-repeatable-for-group">downloadAll(document.querySelectorAll('[class="SvgLibrary-module--svg-card--OKCN6"]'));</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -458,12 +456,21 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
                         <h3 class="heading__3 utility--mb-xsm">References</h3>
                         <a class="code-snippet__reference-link"
-                            href="https://www.git-tower.com/learn/git/faq/git-rename-master-to-main" target="_blank">
-                            <p>https://www.git-tower.com/learn/git/faq/git-rename-master-to-main</p>
+                            href="https://carbondesignsystem.com/guidelines/icons/library/" target="_blank">
+                            <p>IBM Carbon Design System Icons</p>
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                                 <path
                                     d="M26 28H6a2.003 2.003 0 0 1-2-2V6a2.003 2.003 0 0 1 2-2h10v2H6v20h20V16h2v10a2.003 2.003 0 0 1-2 2Z" />
@@ -497,11 +504,11 @@ function download(icon) {
                         </div>
                     </div>
                     <div class="code-snippet__content utility--mt-md">
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
-                            <p class="body__1">Use this format to rename any branch name to another.</p>
+                            <p class="body__1">Within the console of the browser list all header elements.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="list-all-page-headers">for (var i = 0, headings = $$('h1,h2,h3,h4,h5,h6');
     i < headings.length; i++) {
@@ -511,15 +518,6 @@ function download(icon) {
 }</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -537,6 +535,15 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
                         <h3 class="heading__3 utility--mb-xsm">References</h3>
@@ -575,26 +582,17 @@ function download(icon) {
                         </div>
                     </div>
                     <div class="code-snippet__content utility--mt-md">
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
                             <p class="body__1">Open the zsh configuration file in the VS Code IDE. Change the initial
                                 argument if you want to edit the file in another editor. e.g <code
                                     class="code__1">`vi`</code> or <code class="code__1">`vim`</code></p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="open-zsh-config">code ~/.zshrc</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -612,6 +610,15 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -645,20 +652,11 @@ function download(icon) {
                             <h3 class="heading__3 utility--mb-xxsm">Steps</h3>
                             <p class="body__1"><span class="list__1">1.</span> Hide your desktop icons by setting <code class="code__1">CreateDesktop</code> to false.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="hide-mac-icons-1">defaults write com.apple.finder CreateDesktop false</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -676,25 +674,25 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="body__1"><span class="list__1">2.</span> Restart the finder application ot reload the desktop.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="hide-mac-icons-2">Killall Finder</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
-                                <div class="count">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-                                        <path
-                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
-                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
-                                            d="M0 0h32v32H0z" />
-                                    </svg>
-                                    <p class="code-snippet__snippet-counter">0</p>
-                                </div>
                                 <button class="button__primary button__primary--icon copy-button">
                                     <p>Copy</p>
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -712,12 +710,21 @@ function download(icon) {
                                         </svg>
                                     </div>
                                 </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
                             </div>
                         </div>
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="body__1"><span class="list__1">3.</span> When ready. Show your desktop icons by setting <code class="code__1">CreateDesktop</code> to true.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="hide-mac-icons-3">defaults write com.apple.finder CreateDesktop true</code></pre>
                             </div>
@@ -750,10 +757,10 @@ function download(icon) {
                                 </button>
                             </div>
                         </div>
-                        <div class="code-snippet__text-block utility--mb-sm">
+                        <div class="code-snippet__text-block utility--mb-md">
                             <p class="body__1"><span class="list__1">4.</span> Restart the finder application ot reload the desktop.</p>
                         </div>
-                        <div class="code-snippet__snippet utility--mb-sm">
+                        <div class="code-snippet__snippet">
                             <div class="code-snippet__code utility--mb-sm">
                                 <pre><code data-id="hide-mac-icons-4">Killall Finder</code></pre>
                             </div>
