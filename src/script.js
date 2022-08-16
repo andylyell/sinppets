@@ -68,6 +68,7 @@
   ////////////////////////
   var allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
 
+  var allCopyableSnippets = document.querySelectorAll('.code-snippet__snippet');
   var navInformationButton = document.getElementById('nav-information-button');
   var navInformationMenu = document.getElementById('nav-information-menu');
   var sortSnippetButton = document.getElementById('sort-snippet-button');
@@ -179,7 +180,7 @@
 
     codeSnippetsLocalStorage = JSON.parse(codeSnippetsLocalStorage); // if it does exists then parse the contents
 
-    allCodeSnippets.forEach(function (snippet) {
+    allCopyableSnippets.forEach(function (snippet) {
       var snippetId = snippet.querySelector('.code-snippet__code').querySelector('CODE').dataset.id; //get the unique snippet id
       // console.log(snippetId);
 

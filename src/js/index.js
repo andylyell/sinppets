@@ -6,6 +6,7 @@
 //VARIABLES
 ////////////////////////
 const allCodeSnippets = document.querySelectorAll('.code-snippet'); //get all code snippets as a node list
+const allCopyableSnippets = document.querySelectorAll('.code-snippet__snippet');
 const navInformationButton = document.getElementById('nav-information-button');
 const navInformationMenu = document.getElementById('nav-information-menu');
 const sortSnippetButton = document.getElementById('sort-snippet-button');
@@ -106,7 +107,8 @@ function setSnippets() {
         return;
     }
     codeSnippetsLocalStorage = JSON.parse(codeSnippetsLocalStorage); // if it does exists then parse the contents
-    allCodeSnippets.forEach((snippet) => {
+
+    allCopyableSnippets.forEach((snippet) => {
         const snippetId = snippet.querySelector('.code-snippet__code').querySelector('CODE').dataset.id; //get the unique snippet id
         // console.log(snippetId);
         for (const [key, value] of Object.entries(codeSnippetsLocalStorage)) {
@@ -116,7 +118,9 @@ function setSnippets() {
             }
             setUICounter(0, snippet);
         }
+
     });
+
 };
 
 //Function to write to localStorage when there is a button click
