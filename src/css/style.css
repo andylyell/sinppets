@@ -624,6 +624,9 @@ html {
   .tag--browser {
     background: #e32b5f;
     color: #fff; }
+  .tag--a11y {
+    background: #04ebb5;
+    color: #001d12; }
 
 .count {
   padding: .8rem 1.2rem;
