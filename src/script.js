@@ -74,11 +74,18 @@
   var sortSnippetButton = document.getElementById('sort-snippet-button');
   var sortSnippetMenu = document.getElementById('sort-snippet-menu');
   var sortListItems = document.querySelectorAll('.list-select');
-  var snippetContent = document.getElementById('snippet-content'); ////////////////////////
+  var snippetContent = document.getElementById('snippet-content');
+  var searchInput = document.getElementById('search-input');
+  var searchInputContainer = document.getElementById('search-input-count'); ////////////////////////
   //FUNCTIONS
   ////////////////////////
-  //** VIEW FUNCTIONS */
+  //** UTILITY FUNCTIONS */
+
+  function sanitiseString(string) {
+    return string.toLowerCase().trim();
+  } //** VIEW FUNCTIONS */
   //Function to toggle copied class on button
+
 
   function toggleCopiedClass(copyButton) {
     var codeToCopy = copyButton.closest('.code-snippet__snippet').querySelector('CODE').innerHTML; //select the code snippet
@@ -306,9 +313,51 @@
 
     snippetContent.appendChild(elements);
   }
+
+  function evaluateSearchInput(input) {
+    var searchInputValue = sanitiseString(input); // get sanitised value of search input
+    // compare input string to titles of the code snippets
+
+    allCodeSnippets.forEach(function (snippet) {
+      var snippetHeader = sanitiseString(snippet.querySelector('.code-snippet__title').innerHTML); //get snippet header & sanitise
+
+      if (!snippetHeader.includes(searchInputValue)) {
+        // check if the snippet title contains the search input value
+        snippet.classList.add('hide');
+      } else {
+        snippet.classList.remove('hide');
+      }
+    });
+  }
+
+  function updateSearchCount() {
+    var showCount = 0; //init new var to contain number of shown snippets
+
+    if (!searchInput.value) {
+      // check if there is any value within the search input
+      searchInputContainer.classList.remove('show'); //remove show class
+
+      return; // end function
+    }
+    searchInputContainer.innerHTML = ''; //clear the inner html of the search input container
+
+    allCodeSnippets.forEach(function (snippet) {
+      //iterate over call code snippets
+      if (!snippet.classList.contains('hide')) {
+        // check of the snippet does not container hide
+        showCount++; //increment showCount variable
+      }
+    });
+    var template = "<p class=\"body__1\">".concat(showCount, " / ").concat(allCodeSnippets.length, " snippets matched</p>"); //create html template
+
+    searchInputContainer.insertAdjacentHTML('beforeend', template); // insert template into the search container element
+
+    searchInputContainer.classList.add('show'); // add show class to container
+  } ////////////////////////
   //EVENT LISTENERS
   ////////////////////////
   //call script upon page load
+
 
   window.addEventListener('load', function (e) {// console.log(localStorage);
   });
@@ -368,7 +417,7 @@
 
     if (e.target.id === 'reset-count-button') {
       resetLocalStorage();
-      allCodeSnippets.forEach(function (snippet) {
+      allCopyableSnippets.forEach(function (snippet) {
         setUICounter(0, snippet);
       });
     }
@@ -383,6 +432,14 @@
       applySortSelection(e.target); // sortCodeSnippet(e.target);
 
       sortCodeSnippet(e.target.dataset.sort);
+    }
+  }); //catch all input events
+
+  document.addEventListener('input', function (e) {
+    if (e.target.classList.contains('search-input')) {
+      // call search functions
+      evaluateSearchInput(e.target.value);
+      updateSearchCount();
     }
   });
 

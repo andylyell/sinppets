@@ -1,5 +1,9 @@
 .code-snippet {
 
+    &.hide {
+        display: none;
+    }
+
     position: relative;
     padding: 2.4rem 2.4rem 2.4rem 6.4rem;
     background: $grey-8;
@@ -40,7 +44,7 @@
         }
     }
 
-    &__text-block {}
+    // &__text-block {}
 
     &__snippet {
         margin-left: -6.4rem;

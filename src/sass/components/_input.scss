@@ -55,4 +55,14 @@
 
         fill: $grey-3;
     }
+
+    &__count {
+        position: absolute;
+        top: 6.4rem;
+        left: .4rem;
+        display: none;
+        &.show {
+            display: block;
+        }
+    }
 }

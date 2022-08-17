@@ -13,11 +13,17 @@ const sortSnippetButton = document.getElementById('sort-snippet-button');
 const sortSnippetMenu = document.getElementById('sort-snippet-menu');
 const sortListItems = document.querySelectorAll('.list-select');
 const snippetContent = document.getElementById('snippet-content');
+const searchInput = document.getElementById('search-input');
+const searchInputContainer = document.getElementById('search-input-count');
 
 ////////////////////////
 //FUNCTIONS
 ////////////////////////
 
+//** UTILITY FUNCTIONS */
+function sanitiseString(string) {
+    return string.toLowerCase().trim();
+}
 
 //** VIEW FUNCTIONS */
 
@@ -222,6 +228,38 @@ function sortCodeSnippet(element) {
     snippetContent.appendChild(elements);
 };
 
+//function to check search input
+function evaluateSearchInput(input) {
+    const searchInputValue = sanitiseString(input); // get sanitised value of search input
+    // compare input string to titles of the code snippets
+    allCodeSnippets.forEach((snippet) => {        
+        const snippetHeader = sanitiseString(snippet.querySelector('.code-snippet__title').innerHTML); //get snippet header & sanitise
+        if(!snippetHeader.includes(searchInputValue)) { // check if the snippet title contains the search input value
+            snippet.classList.add('hide');
+        } else {
+            snippet.classList.remove('hide');
+        }
+    });
+};
+
+//update search count in DOM
+function updateSearchCount() {
+    let showCount = 0; //init new var to contain number of shown snippets
+    if(!searchInput.value) { // check if there is any value within the search input
+        searchInputContainer.classList.remove('show'); //remove show class
+        return; // end function
+    };
+    searchInputContainer.innerHTML = ''; //clear the inner html of the search input container
+    allCodeSnippets.forEach((snippet) => { //iterate over call code snippets
+        if(!snippet.classList.contains('hide')) { // check of the snippet does not container hide
+            showCount ++; //increment showCount variable
+        }
+    });
+    const template = `<p class="body__1">${showCount} / ${allCodeSnippets.length} snippets matched</p>`; //create html template
+    searchInputContainer.insertAdjacentHTML('beforeend', template); // insert template into the search container element
+    searchInputContainer.classList.add('show'); // add show class to container
+}
+
 ////////////////////////
 //EVENT LISTENERS
 ////////////////////////
@@ -292,7 +330,7 @@ document.addEventListener('click', (e) => {
     //--//
     if(e.target.id === 'reset-count-button') {
         resetLocalStorage();
-        allCodeSnippets.forEach((snippet) => {
+        allCopyableSnippets.forEach((snippet) => {
             setUICounter(0, snippet);
         });
     };
@@ -312,5 +350,14 @@ document.addEventListener('keydown', (e) => {
         sortCodeSnippet(e.target.dataset.sort);
     };
 
-    
-})
+
+});
+
+//catch all input events
+document.addEventListener('input', (e) => {
+    if(e.target.classList.contains('search-input')) {
+        // call search functions
+        evaluateSearchInput(e.target.value);
+        updateSearchCount();
+    }
+});

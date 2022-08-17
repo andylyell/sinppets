@@ -34,7 +34,7 @@
                                 <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none" d="M0 0h32v32H0z" />
                             </svg>
                         </button>
-                        <a href="">
+                        <!-- <a href="">
                             <button tabindex="-1" class="button__primary button__primary--icon nav-menu-button">
                                 <p>See GitHub repo</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
@@ -45,7 +45,7 @@
                                         d="M0 0h32v32H0z" />
                                 </svg>
                             </button>
-                        </a>
+                        </a> -->
                         <a href="https://www.andylyell.com" target="_blank">
                             <button tabindex="-1" class="button__primary button__primary--icon nav-menu-button">
                                 <p>See creator</p>
@@ -79,14 +79,17 @@
 
     <main class="main">
         <!-- CONTROL PANEL -->
-        <section class="main__control utility--mb-xlg">
+        <section class="main__control utility--mb-xxxlg">
             <!-- Search input -->
             <div class="search-input__container">
-                <input class="search-input" type="text" placeholder="Search...">
+                <input class="search-input" type="text" id="search-input" placeholder="Search...">
                 <svg class="search-input__search-icon" viewBox="0 0 32 32">
                     <path d="M30 28.59L22.45 21A11 11 0 1021 22.45L28.59 30zM5 14a9 9 0 119 9 9 9 0 01-9-9z" />
                     <path data-name="&lt;Transparent Rectangle&gt;" fill="none" d="M0 0h32v32H0z" />
                 </svg>
+                <div id="search-input-count" class="search-input__count">
+                    <p class="body__1">2 / 6 snippets matched</p>
+                </div>
             </div>
             <!-- Button control group -->
             <div class="main__control-button-group">
@@ -170,7 +173,7 @@
 
             <div class="main__content-group utility--mb-xlg" id="snippet-content">
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -235,7 +238,7 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
                 <!-- ########################## -->
@@ -243,7 +246,7 @@
                 <!-- ########################## -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -251,8 +254,7 @@
                             <path style="fill:none" d="M0 0h32v32H0z" />
                         </svg>
                     </div>
-                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Instantiate the z/OS Connect
-                        Designer using Docker
+                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Instantiate the z/OS Connect Designer using Docker
                     </h2>
                     <div class="code-snippet__tag-group">
                         <div class="tag tag--docker">
@@ -334,7 +336,7 @@
                             </div>
                         </div>
                     </div> 
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
             <!-- ########################## -->
@@ -342,7 +344,7 @@
             <!-- ########################## -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -350,8 +352,7 @@
                             <path style="fill:none" d="M0 0h32v32H0z" />
                         </svg>
                     </div>
-                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Download Carbon Icons from
-                        the Carbon site via browser
+                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Download Carbon Icons from the Carbon site via browser
                     </h2>
                     <div class="code-snippet__tag-group">
                         <div class="tag tag--javascript">
@@ -479,11 +480,11 @@ function download(icon) {
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -558,11 +559,11 @@ function download(icon) {
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -632,7 +633,7 @@ function download(icon) {
                             </svg>
                         </a>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
                 <!-- ########################## -->
@@ -640,7 +641,7 @@ function download(icon) {
                 <!-- ########################## -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -696,11 +697,68 @@ function download(icon) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
 
                 <!-- SNIPPET START -->
-                <div class="code-snippet">
+                <article class="code-snippet">
+                    <div class="code-snippet__control">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
+                            style="enable-background:new 0 0 32 32" xml:space="preserve">
+                            <path d="m12 8 10 8-10 8z" />
+                            <path style="fill:none" d="M0 0h32v32H0z" />
+                        </svg>
+                    </div>
+                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Temporarily add an executable within a terminal session</h2>
+                    <div class="code-snippet__tag-group">
+                        <div class="tag tag--mac">
+                            MacOS
+                        </div>
+                    </div>
+                    <div class="code-snippet__content utility--mt-md">
+                        <div class="code-snippet__text-block utility--mb-md">
+                            <p class="title__1 utility--mb-xxsm">Description</p>
+                            <p class="body__1">Temporarily add an executable within a terminal session</p>
+                        </div>
+                        <div class="code-snippet__snippet">
+                            <div class="code-snippet__code utility--mb-sm">
+                                <pre><code data-id="open-zsh-config">export PATH=$PATH:/path/to/bin/</code></pre>
+                            </div>
+                            <div class="code-snippet__snippet-control">
+                                <button class="button__primary button__primary--icon copy-button">
+                                    <p>Copy</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z" />
+                                        <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <div class="button__primary--copied">
+                                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z" />
+                                            <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                                d="M0 0h32v32H0z" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!-- SNIPPET END -->
+
+                <!-- SNIPPET START -->
+                <article class="code-snippet">
                     <div class="code-snippet__control">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"
                             style="enable-background:new 0 0 32 32" xml:space="preserve">
@@ -868,7 +926,7 @@ function download(icon) {
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
                 <!-- SNIPPET END -->
             </div>
         </section>

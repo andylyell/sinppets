@@ -538,6 +538,13 @@ html {
     height: 2.4rem;
     width: 2.4rem;
     fill: #8D8D8D; }
+  .search-input__count {
+    position: absolute;
+    top: 6.4rem;
+    left: .4rem;
+    display: none; }
+    .search-input__count.show {
+      display: block; }
 
 .code-snippet {
   position: relative;
@@ -546,6 +553,8 @@ html {
   border: 1px solid #3E3E3E;
   border-radius: 12px;
   transition: all .2s; }
+  .code-snippet.hide {
+    display: none; }
   .code-snippet__control {
     position: absolute;
     top: 2.4rem;
