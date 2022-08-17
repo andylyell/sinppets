@@ -329,7 +329,7 @@ html {
 
 .heading__2 {
   font-size: 2.4rem;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 2.9rem;
   letter-spacing: 0.01em;
   text-align: left;
@@ -372,7 +372,7 @@ html {
   border-radius: 2px;
   margin: 0 .3rem;
   padding: 1px 2px;
-  color: #A7A7A7; }
+  color: #F0F0F0; }
 
 .list__1 {
   font-style: normal;
@@ -455,7 +455,6 @@ html {
   top: 4.7rem;
   background: #1D1D1F;
   border: 1px solid #6A6A6A;
-  width: 26rem;
   z-index: 100; }
   .button__menu button, .button__menu a {
     float: right; }
@@ -466,6 +465,11 @@ html {
   .button__menu--sort-list {
     padding: 1.6rem 0rem;
     width: 32rem; }
+  .button__menu--nav-list {
+    width: 26rem; }
+    @media only screen and (max-width: 520px) {
+      .button__menu--nav-list {
+        width: 27rem; } }
 
 .list-select {
   display: flex;
@@ -510,7 +514,14 @@ html {
   color: #F0F0F0;
   transition: all .2s; }
   .search-input__container {
-    position: relative; }
+    position: relative;
+    margin-right: 1.2rem; }
+    @media only screen and (max-width: 560px) {
+      .search-input__container {
+        width: 100%; } }
+  @media only screen and (max-width: 560px) {
+    .search-input {
+      width: 100%; } }
   .search-input:focus {
     outline: 0;
     background: #1D1D1F;
@@ -655,6 +666,9 @@ html {
   background: #151516;
   border-bottom: 1px solid #3E3E3E;
   padding: 4.8rem 0; }
+  @media only screen and (max-width: 940px) {
+    .nav {
+      padding: 4.8rem 1.6rem; } }
   .nav__content {
     max-width: 90rem;
     margin: 0 auto; }
@@ -664,6 +678,9 @@ html {
     align-items: center; }
   .nav__aside--no-content {
     width: 40rem; }
+    @media only screen and (max-width: 530px) {
+      .nav__aside--no-content {
+        width: 100%; } }
   .nav__information-menu {
     position: relative; }
 
@@ -671,6 +688,9 @@ html {
   max-width: 90rem;
   margin: 0 auto;
   padding: 6.4rem 0; }
+  @media only screen and (max-width: 940px) {
+    .main {
+      padding: 6.4rem 1.6rem; } }
   .main__control {
     display: flex;
     justify-content: space-between;
@@ -687,6 +707,9 @@ html {
 .footer {
   width: 90rem;
   margin: 0 auto; }
+  @media only screen and (max-width: 940px) {
+    .footer {
+      padding: 0 1.6rem; } }
   .footer__link {
     display: inline-flex;
     align-items: center; }

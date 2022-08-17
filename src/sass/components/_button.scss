@@ -101,6 +101,7 @@
     }
 
     &__menu {
+
         display: none;
         position: absolute;
         padding: 2.4rem;
@@ -109,7 +110,6 @@
         top: 4.7rem;
         background: $grey-7;
         border: 1px solid $grey-4;
-        width: 26rem;
         z-index: 100;
         & button, & a {
             float: right;
@@ -123,6 +123,12 @@
         &--sort-list {
             padding: 1.6rem 0rem;
             width: 32rem;
+        }
+        &--nav-list {
+            width: 26rem;
+            @media only screen and (max-width: 520px) {
+                width: 27rem;
+            };
         }
     }
 }

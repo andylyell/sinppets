@@ -2,6 +2,9 @@
     max-width: 90rem;
     margin: 0 auto;
     padding: 6.4rem 0;
+    @media only screen and (max-width: 940px) { 
+        padding: 6.4rem 1.6rem;
+    };
 
     &__control {
         display: flex;
