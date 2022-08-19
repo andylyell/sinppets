@@ -7,7 +7,7 @@
     position: relative;
     padding: 2.4rem 2.4rem 2.4rem 6.4rem;
     background: $grey-8;
-    border: 1px solid $grey-5;
+    // border: 1px solid $grey-5;
     border-radius: 12px;
     transition: all .2s;
 
@@ -18,17 +18,17 @@
         }
 
         position: absolute;
-        top: 2.4rem;
-        left: 1.6rem;
+        top: 2.7rem;
+        left: 2.4rem;
 
         cursor: pointer;
 
         & svg {
             pointer-events: none;
-            $control-icon-dimensions: 3.2rem;
+            $control-icon-dimensions: 2.4rem;
             width: $control-icon-dimensions;
             height: $control-icon-dimensions;
-            fill: $grey-3;
+            fill: $grey-4;
         }
     }
 
@@ -49,8 +49,8 @@
     &__snippet {
         margin-left: -6.4rem;
         margin-right: -2.4rem;
-        border-top: 1px solid $grey-5;
-        border-bottom: 1px solid $grey-5;
+        // border-top: 1px solid $grey-5;
+        // border-bottom: 1px solid $grey-5;
         padding: 3.2rem 2.4rem 3.2rem 6.4rem;
         background-color: #000000;
     }

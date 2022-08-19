@@ -13,7 +13,7 @@
 
     <nav class="nav">
         <div class="nav__content">
-            <div class="nav__main utility--mb-xlg">
+            <div class="nav__main utility--mb-lg">
                 <h1 class="heading__1">Snippets.</h1>
 
                 <div class="nav__information-menu">
@@ -64,7 +64,7 @@
             </div>
             <div class="nav__aside">
                 <div class="nav__aside--no-content">
-                    <h2 class="heading__2">
+                    <h2 class="heading__2 nav__sub-heading">
                         Snippets I find useful to refer back to when I need them.
                     </h2>
                 </div>
@@ -264,11 +264,11 @@
                     <div class="code-snippet__content utility--mt-md">
                         <div class="code-snippet__text-block utility--mb-md">
                             <p class="title__1 utility--mb-xxsm">Description</p>
-                            <p class="body__1">Use this snippet to clone the z/OS Connect CICS sample API project and start up the z/OS Connect Designer tooling with the finished project mounted.</p>
+                            <p class="body__1">Start the z/OS Connect Designer tooling.</p>
                         </div>
                         <div class="code-snippet__snippet utility--mb-md">
                             <div class="code-snippet__code utility--mb-sm">
-                                <pre><code data-id="use-zc-only-docker">git clone https://github.com/zosconnect/sample-cics-api && cd sample-cics-api/finish && docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=1110 -e CICS_USER='alyell' -e CICS_PASSWORD='={aes}bd7gi_383bdbILF;BN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
+                                <pre><code data-id="use-zc-only-docker">docker run -it -p 9080:9080 -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
                                 <button class="button__primary button__primary--icon copy-button">
@@ -300,11 +300,49 @@
                             </div>
                         </div>
                         <div class="code-snippet__text-block utility--mb-md">
+                            <p class="title__1 utility--mb-xxsm">Description</p>
+                            <p class="body__1">Start up the z/OS Connect Designer tooling and pass in environment variables for a CICS connection.</p>
+                        </div>
+                        <div class="code-snippet__snippet utility--mb-md">
+                            <div class="code-snippet__code utility--mb-sm">
+                                <pre><code data-id="use-zc-only-docker-env-vars">docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=9871 -e CICS_USER='rsmith' -e CICS_PASSWORD='={aes}bd7gi_383bdb99OLF;vN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
+                            </div>
+                            <div class="code-snippet__snippet-control">
+                                <button class="button__primary button__primary--icon copy-button">
+                                    <p>Copy</p>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 10v18H10V10h18m0-2H10a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V10a2 2 0 0 0-2-2Z" />
+                                        <path d="M4 18H2V4a2 2 0 0 1 2-2h14v2H4Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <div class="button__primary--copied">
+                                        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                            <path d="m13 24-9-9 1.414-1.414L13 21.171 26.586 7.586 28 9 13 24z" />
+                                            <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                                d="M0 0h32v32H0z" />
+                                        </svg>
+                                    </div>
+                                </button>
+                                <div class="count">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                                        <path
+                                            d="M28 12v-2h-6V4h-2v6h-8V4h-2v6H4v2h6v8H4v2h6v6h2v-6h8v6h2v-6h6v-2h-6v-8Zm-8 8h-8v-8h8Z" />
+                                        <path data-name="&lt;Transparent Rectangle&gt;" style="fill:none"
+                                            d="M0 0h32v32H0z" />
+                                    </svg>
+                                    <p class="code-snippet__snippet-counter">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="code-snippet__text-block utility--mb-md">
+                            <p class="title__1 utility--mb-xxsm">Description</p>
                             <p class="body__1">This snippet will simply start the docker container in your current directory with environmental variables. Make sure you update the variables to your own.</p>
                         </div>
                         <div class="code-snippet__snippet">
                             <div class="code-snippet__code utility--mb-sm">
-                                <pre><code data-id="no-git-clone-use-zc-only-docker">docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=1110 -e CICS_USER='alyell' -e CICS_PASSWORD='={aes}bd7gi_383bdbILF;BN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
+                                <pre><code data-id="use-zc-only-docker-git-clone">git clone https://github.com/zosconnect/sample-cics-api && cd sample-cics-api/finish && docker run -it -p 9080:9080 -e CICS_HOST='bank.com' -e CICS_PORT=1110 -e CICS_USER='alyell' -e CICS_PASSWORD='={aes}bd7gi_383bdbILF;BN72DKW==' -v $PWD:/workspace/project icr.io/zosconnect/ibm-zcon-designer:3.0.59</code></pre>
                             </div>
                             <div class="code-snippet__snippet-control">
                                 <button class="button__primary button__primary--icon copy-button">
@@ -709,7 +747,7 @@ function download(icon) {
                             <path style="fill:none" d="M0 0h32v32H0z" />
                         </svg>
                     </div>
-                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Temporarily add an executable within a terminal session</h2>
+                    <h2 tabindex="0" class="heading__2 code-snippet__title utility--mb-sm">Temporarily add an executable utility within a terminal session</h2>
                     <div class="code-snippet__tag-group">
                         <div class="tag tag--mac">
                             MacOS
